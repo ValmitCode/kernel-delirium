@@ -5,9 +5,9 @@ My main goal in doing this project is to gain experience in developing modules f
 
 ## Usage
 This python script will generate the vulnerable module and hide the traces of it's work 
-'''bash
+```bash
 sudo python3 clean_and_load.py
-'''
+```
 
 ## Status
 The software is not yet operational and is under active development.
