@@ -58,6 +58,7 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "unistd.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "kernel.h": "c"
   }
 }

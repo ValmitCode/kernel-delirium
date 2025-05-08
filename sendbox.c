@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <linux/module.h>
-#include <unistd.h>
-#include <string.h>
+#include<stdio.h>
+#include<stdlib.h>
+#include<linux/module.h>
+#include<unistd.h>
+#include<string.h>
 #include<sys/types.h>
 #include<stdio.h>
 #include<sys/types.h>
