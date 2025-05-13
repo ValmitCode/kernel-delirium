@@ -67,3 +67,7 @@ kernel-delirium
 ### Debian-based :white_check_mark:
 ### Arch-based :x:
 ### OpenSuse :x:
+
+## Currently working on :hammer_and_wrench: :
+### Kernel module itself sending the information
+### Desktop app receiveng the information
