@@ -6,7 +6,7 @@ My idea was to create a kernel module for linux machine which is basically a bea
 
 ## How to use?
 
-To use this software you should install a desktop app and run deploy_and_clean.py (I recommend to assemble file with base64) on the victim machine cause that's more time efficient.
+To use this software you should install a desktop app on your machine and run deploy_and_clean.py (I recommend to assemble file with base64 with command below) on the victim machine, cause that's more time efficient.
 
 ### Victim machine :syringe: :computer:
 
