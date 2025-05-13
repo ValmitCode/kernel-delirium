@@ -1,4 +1,4 @@
-# Kernel Delirium :coffin: (Not working yet, still requires development)
+# Kernel Delirium :smoking: (Not working yet, still requires development)
 
 ## What is it about
 
@@ -66,7 +66,7 @@ apt-get install kernel-delirium (Not gonna work yet)
 kernel-delirium
 ```
 
-##Works on distros:
+## Works on distros:
 ### Debian-based :white_check_mark:
-### Arch-based repository :x:
+### Arch-based :x:
 ### OpenSuse :x:
