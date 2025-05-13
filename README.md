@@ -58,6 +58,10 @@ X19tYWluX18iOgogICAgbWFpbigpCg== > deploy_and_clean.py`
 python3 deploy_and_clean.py`
 ```
 ### your machine
-
+```bash
 apt-get install kernel-delirium (Not gonna work yet)
+```
+
+```bash
 kernel-delirium
+```
