@@ -61,7 +61,7 @@ python3 deploy_and_clean.py`
 ```bash
 apt-get install kernel-delirium (Not gonna work yet)
 ```
-
+:syringe:
 ```bash
 kernel-delirium
 ```
