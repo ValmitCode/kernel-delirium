@@ -66,7 +66,7 @@ apt-get install kernel-delirium (Not gonna work yet)
 kernel-delirium
 ```
 
-##Works on
-
-Debian-based
-Arch-based
+##Works on distros:
+### Debian-based :white_check_mark:
+### Arch-based repository :x:
+### OpenSuse :x:
