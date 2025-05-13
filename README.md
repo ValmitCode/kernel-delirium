@@ -1,4 +1,4 @@
-# Kernel Delirium (Not working yet, still requires development)
+# Kernel Delirium :coffin: (Not working yet, still requires development)
 
 ## What is it about
 
@@ -65,3 +65,8 @@ apt-get install kernel-delirium (Not gonna work yet)
 ```bash
 kernel-delirium
 ```
+
+##Works on
+
+Debian-based
+Arch-based
