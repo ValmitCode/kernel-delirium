@@ -1,4 +1,4 @@
-# Kernel Delirium :smoking: :penguin: (Not working yet, still requires development)
+# Kernel Delirium :smoking: :penguin: (Educational purposes only)
 
 ## What is it about
 
